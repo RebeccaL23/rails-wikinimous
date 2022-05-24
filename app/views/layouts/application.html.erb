@@ -6,11 +6,15 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
-    <%= yield %>
+    <header><div class='header-column col-6'><h2>Wikinimous</h2></div><div id='column-2' class='header-column col-6'><%= link_to "Add article", new_article_path %></div></header>
+    <div class='content'><%= yield %></div>
+    <script src="https://kit.fontawesome.com/917ef12469.js" crossorigin="anonymous"></script>
   </body>
 </html>
